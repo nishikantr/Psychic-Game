@@ -14,6 +14,11 @@ document.querySelector('#guessesLeft').innerHTML = "Guesses Left: " + guessesLef
 
 
 document.onkeyup = function(event) {
+    console.log(event.keyCode)
+
+     var x = event.keyCode;               
+     var y = String.fromCharCode(x);  
+ 			document.querySelector('#yourGuesses').innerHTML = "Your Key Guesses: " + y;
 
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
